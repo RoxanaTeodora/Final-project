@@ -1,31 +1,43 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Link, Outlet } from "react-router-dom";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <div>
-      <footer class="relative mt-20 bg-gray-900 px-4 pt-20">
-        <div class="absolute -top-10 left-1/2 h-16 w-16 -translate-x-1/2 rounded-full border-4 border-green-700 bg-white p-2">
-          <img class="h-full object-contain" src="./logo6.PNG" alt="logo" />
+      <footer className="relative mt-20 bg-[#213425] px-4 pt-20">
+        <div className="absolute -top-10 left-1/2 h-20 w-20 -translate-x-1/2 rounded-full border-4 border-[#213425] bg-white ">
+          <img
+            width={800}
+            class="h-full w-full object-contain "
+            src="./logo7.PNG"
+            alt="logo"
+          />
         </div>
         <nav
           aria-label="Footer Navigation"
-          class="mx-auto mb-10 flex max-w-lg flex-col gap-10 text-center sm:flex-row sm:text-left"
+          className="mx-auto mb-6 flex max-w-lg flex-col gap-8 text-center sm:flex-row sm:text-left align-center justify-center"
         >
-          <a href="#" class="font-medium text-white">
-            Demo
-          </a>
-          <a href="#" class="font-medium text-white">
-            Support
-          </a>
-          <a href="#" class="font-medium text-white">
-            Privacy Policy
-          </a>
-          <a href="#" class="font-medium text-white">
-            Terms & Conditions
-          </a>
+          <Link className="font-medium text-white" to="/about">
+            About
+          </Link>
+
+          <Link className="font-medium text-white" to="/">
+            Products
+          </Link>
+
+          <Link className="font-medium text-white" to="/cart">
+            Cart
+          </Link>
+          <Link className="font-medium text-white" to="/contact">
+            Contact
+          </Link>
+          <Link className="font-medium text-white" to="/admin">
+            Admin
+          </Link>
         </nav>
-        <p class="py-10 text-center text-gray-300">
-          © 2022 Boleno | All Rights Reserved
+        <p class="py-8 text-center text-gray-300">
+          © 2023 | 3D Green Concept | All Rights Reserved
         </p>
       </footer>
     </div>

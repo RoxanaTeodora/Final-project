@@ -43,7 +43,7 @@ const Home = () => {
   return filteredProducts ? (
     // <ProductsConainter products={products} />
     <div>
-      <div className="flex gap-4 p-5 text-center text-2xl place-content-center ">
+      {/* <div className="flex gap-4 p-5 text-center text-2xl place-content-center ">
         <div>
           <input
             className="h-6 w-6"
@@ -55,14 +55,14 @@ const Home = () => {
         </div>
         <div>
           <input
-            className="h-6 w-6"
-            type="checkbox"
+            className="h-6 w-6 text-green-900 bg-green-900 "
             id="filter2"
+            type="checkbox"
             onChange={(e) => onChangeFilterPrice(e, 500, Infinity)}
           />
           <label htmlFor="filter2"> more than 500 </label>
         </div>
-      </div>
+      </div> */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.map((product) => (
           <div key={product.id}>

@@ -173,9 +173,9 @@ const Admin = () => {
           </button> */}
         </div>
       </div>
-      <div>
+      <div className="flex align-middle justify-center">
         {products && (
-          <table className="mt-[100px]">
+          <table className="mt-[100px] ">
             <thead>
               <th>Name</th>
               <th>Image URL</th>

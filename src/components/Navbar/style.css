@@ -25,7 +25,7 @@
 .navbar .menu {
   display: flex;
   gap: 10px;
-  padding-top: 32px;
+  padding-top: 25px;
   align-items: center;
 }
 
@@ -48,4 +48,13 @@
   width: 50px;
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 450px) {
+  .img {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
 }

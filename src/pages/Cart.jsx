@@ -83,7 +83,7 @@ const Cart = () => {
 
   //daca exista produce in card
   return products && productsInCart ? (
-    <div className="p-10 gap-10 flex flex-col justify-center items-center">
+    <div className="p-10 gap-10 flex flex-col ">
       {productsInCart.map((productInCart) => {
         const product = getProductById(productInCart.id);
 
@@ -92,46 +92,56 @@ const Cart = () => {
             className="flex gap-10 justify-between items-center"
             key={productInCart.id}
           >
-            <p>{product.name}</p>
-            <img width={80} src={product.imageURL} />
-            <p>{product.price}</p>
-            <div className="flex gap-5 items-center">
-              <button
-                id={productInCart.id}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-                onClick={decreaseQuantity}
-              >
-                -
-              </button>
-              <p>{productInCart.qt}</p>
-              <button
-                id={productInCart.id}
-                className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-                onClick={increaseQuantity}
-              >
-                +
-              </button>
-              <button
-                id={productInCart.id}
-                className="bg-red-400 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
-                onClick={deleteProductFromCart}
-              >
-                Delete
-              </button>
-            </div>
+            <table className="w-full">
+              <tr className="flex justify-center items-center">
+                <td className="p-10 w-[250px]">
+                  <p>{product.name}</p>
+                </td>
+                <td className="p-2 justify-center align-middle flex">
+                  <img width={80} src={product.imageURL} alt={product.name} />
+                </td>
+                <td className="p-10 ">
+                  <p>{product.price}</p>
+                </td>
+                <td className="p-2 flex gap-5 items-center">
+                  <button
+                    id={productInCart.id}
+                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                    onClick={decreaseQuantity}
+                  >
+                    -
+                  </button>
+                  <p>{productInCart.qt}</p>
+                  <button
+                    id={productInCart.id}
+                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                    onClick={increaseQuantity}
+                  >
+                    +
+                  </button>
+                  <button
+                    id={productInCart.id}
+                    className="bg-red-400 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                    onClick={deleteProductFromCart}
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </table>
           </div>
         );
       })}
     </div>
   ) : (
-    <div>
+    <div className="pt-20">
       Cosul este momentan gol, va rugam sa adaugati produse din{" "}
       <Link className="underline text-blue-500" to="/">
         pagina de produse
       </Link>
     </div>
   );
-  g;
+  <div></div>;
 };
 
 export default Cart;

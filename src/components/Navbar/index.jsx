@@ -24,9 +24,7 @@ export const Navbar = (props) => {
   return (
     <div className="navbar shadow-md w-full">
       <div className="logo">
-        <div className="img">
-          <img src="./logo6.PNG" alt="logo" />
-        </div>
+        <div className="img">{/* <img src="./logo9.PNG" alt="logo" /> */}</div>
         <div>
           <Link to="/about">About</Link>
         </div>
@@ -36,11 +34,12 @@ export const Navbar = (props) => {
         <div>
           <Link to="/cart">Cart</Link>
         </div>
-      </div>
-      <div className="menu">
         <div>
-          <Link to="/admin">Admin</Link>
+          <Link to="/contact">Contact</Link>
         </div>
+      </div>
+      <div className="menu ">
+        <Link to="/admin">Admin</Link>
         <Outlet />
       </div>
     </div>
