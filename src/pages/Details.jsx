@@ -28,13 +28,22 @@ const Details = () => {
   return products ? (
     <div>
       {products.map((product) => (
-        <div key={product.id}>
-          <div className="flex items-center justify-center pt-10">
-            <img src={product.imageURL} width={100} alt="" />
+        <div key={product.id} className="flex justify-center">
+          {/* Partea stângă pentru imagine și nume */}
+          <div className="w-auto">
+            <div className="flex justify-evenly pt-12 pl-20">
+              <img src={product.imageURL} width={300} alt="" />
+            </div>
+            <div>
+              <div className="font-bold justify-evenly pl-20 flex ">
+                {product.name}
+              </div>
+            </div>
           </div>
-          <div>
-            <div className="font-bold">{product.name}</div>
-            {product.description}
+
+          {/* Partea dreaptă pentru descriere */}
+          <div className="w-1/2 flex flex-col justify-evenly mt-40 ">
+            <div className="justify-center">{product.description}</div>
           </div>
         </div>
       ))}

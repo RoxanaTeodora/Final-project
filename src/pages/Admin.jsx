@@ -98,12 +98,12 @@ const Admin = () => {
   };
 
   return (
-    <div className="p-10">
-      <div className="flex flex-col gap-4 place-content-center">
-        <div className="flex gap-28 place-content-center">
+    <div className="p-10  ">
+      <div className="flex flex-col  gap-4 place-content-center mx-auto mt-10 ">
+        <div className="flex gap-[191px] place-content-center ">
           <label htmlFor="name">Name</label>
           <input
-            className="form-control  p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="form-control w-[500px] p-2 text-gray-900 border border-gray-300  bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             type="text"
             id="name"
             value={product.name}
@@ -113,12 +113,12 @@ const Admin = () => {
             }}
           />
         </div>
-        <div className="flex gap-20 place-content-center">
+        <div className="flex gap-[159px] place-content-center ">
           <label htmlFor="imageURL">Image URL</label>
           <input
             type="text"
             id="imageURL"
-            className="form-control  p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="form-control w-[500px] p-2 text-gray-900 border border-gray-300  bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={product.imageURL}
             onChange={(e) => {
               const imageURL = e.target.value;
@@ -130,12 +130,12 @@ const Admin = () => {
             }}
           />
         </div>
-        <div className="flex gap-32 place-content-center">
+        <div className="flex gap-[200px] place-content-center">
           <label htmlFor="price">Price</label>
           <input
             type="text"
             id="price"
-            className="form-control  p-2 text-gray-900 border border-gray-300  bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="form-control w-[500px] p-2 text-gray-900 border border-gray-300  bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={product.price}
             onChange={(e) => {
               const productPrice = e.target.value;
@@ -143,12 +143,12 @@ const Admin = () => {
             }}
           />
         </div>
-        <div className="flex gap-20 place-content-center ">
+        <div className="flex gap-[155px] place-content-center ">
           <label htmlFor="description">Description</label>
           <input
             type="text"
             id="description"
-            className=" form-control  p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className=" form-control w-[500px]  p-2 text-gray-900 border border-gray-300  bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             value={product.description}
             onChange={(e) => {
               const productDescription = e.target.value;
@@ -156,10 +156,10 @@ const Admin = () => {
             }}
           />
         </div>
-        <div className="flex justify-center items-center ">
+        <div className="flex m-6 justify-center items-center ">
           <button
             onClick={addNewProduct}
-            className=" flex justify-center items-center flex-row  bg-green-800 px-7 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-green-300"
+            className=" flex justify-center items-center flex-row mr-[90px]  bg-green-800 px-7 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-green-300"
           >
             Add new product
           </button>
@@ -173,7 +173,10 @@ const Admin = () => {
           </button> */}
         </div>
       </div>
-      <div className="flex align-middle justify-center">
+
+      {/* <div className=" mx-auto max-w-screen-xxl overflow-hidden shadow-lg ">
+        <div className=" w-full flex flex-col overflow-hidden  sm:flex-row md:h-200"></div> */}
+      <div className="flex align-middle justify-center mx-auto overflow-hidden shadow-lg  max-w-screen-xx ">
         {products && (
           <table className="mt-[100px] ">
             <thead>
@@ -191,9 +194,9 @@ const Admin = () => {
                   <td className=" pr-[10px]">
                     <img src={product.imageURL} width={100} alt="" />
                   </td>
-                  <td className=" pr-[10px]">{product.price}</td>
+                  <td className=" p-[14px]">{product.price}</td>
                   <td>{product.description}</td>
-                  <td className="pr-[10px]">
+                  <td className="p-[10px]">
                     <button
                       id={product.id}
                       //se selecteaza produsul cu id-ul mentionat
@@ -216,7 +219,7 @@ const Admin = () => {
                     <button
                       id={product.id}
                       onClick={(e) => deleteProduct(e.target.id)}
-                      className="pr-[10px] bg-[brown] hover:bg-[gray] text-gray-800 font-semibold py-2 px-4 border border-gray-400  shadow"
+                      className="pr-[10px] bg-orange-700 hover:bg-[gray] text-gray-800 font-semibold py-2 px-4 border border-gray-400  shadow"
                     >
                       Delete
                     </button>

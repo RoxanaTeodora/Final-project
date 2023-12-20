@@ -111,7 +111,7 @@ function About() {
             </h2>
             <p className="mt-12 text-lg ml-4 p-30 text-justify mr-10 w-ful">
               The environmental study on 3D models of furniture using
-              sustainable solutions for manufacturing.The purpose of the
+              sustainable solutions for manufacturing. The purpose of the
               eco-design is to reduce the negative impact on the environment by
               using the useful, sustainable and aesthetically pleasing product.
             </p>

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import bin from "../assets/bin.png";
+import add from "../assets/add.png";
+import minus from "../assets/minus.png";
 
 const Cart = () => {
   const [products, setProducts] = useState(null);
@@ -98,34 +101,37 @@ const Cart = () => {
                   <p>{product.name}</p>
                 </td>
                 <td className="p-2 justify-center align-middle flex">
-                  <img width={80} src={product.imageURL} alt={product.name} />
+                  <img width={150} src={product.imageURL} alt={product.name} />
                 </td>
                 <td className="p-10 ">
                   <p>{product.price}</p>
                 </td>
                 <td className="p-2 flex gap-5 items-center">
-                  <button
+                  <img
+                    src={minus}
+                    alt="minus"
+                    className="w-[20px] hover:cursor-pointer"
                     id={productInCart.id}
-                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
                     onClick={decreaseQuantity}
-                  >
-                    -
-                  </button>
+                  />
+
                   <p>{productInCart.qt}</p>
-                  <button
+
+                  <img
+                    src={add}
+                    alt="add"
+                    className="w-[20px] hover:cursor-pointer"
                     id={productInCart.id}
-                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
                     onClick={increaseQuantity}
-                  >
-                    +
-                  </button>
-                  <button
-                    id={productInCart.id}
-                    className="bg-red-400 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded"
+                  />
+
+                  <img
+                    src={bin}
+                    alt="bin"
+                    className="w-[20px] hover:cursor-pointer"
                     onClick={deleteProductFromCart}
-                  >
-                    Delete
-                  </button>
+                    id={productInCart.id}
+                  />
                 </td>
               </tr>
             </table>

@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5z7sieh",
+        "template_5td7pzt",
+        form.current,
+        "vOCGkiXNQ2U-IgRSz"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("email send");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div>
       <div className="sm:p-10 my-auto">
@@ -76,9 +100,17 @@ const Contact = () => {
                   </svg>
                   <div>
                     <p className="font-serif text-base md:text-lg">
+                      {/* <a href={`mailto:${emailAddress}`}>{emailAddress}</a> */}
                       Catana Roxana
                     </p>
-                    <span className="block text-xs uppercase">LinkedIn</span>
+                    <span className="block text-xs uppercase">
+                      <a
+                        href="https://www.linkedin.com/in/roxana-teodora-catana-072313183/"
+                        target="_blank"
+                      >
+                        LinkedIn
+                      </a>
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -86,33 +118,36 @@ const Contact = () => {
             <div className="order-first col-span-4 max-w-screen-md px-8 py-10 md:order-last md:col-span-2 md:px-10 md:py-12">
               <h2 className="mb-8 text-2xl font-bold">Get in touch</h2>
 
-              <form action="">
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="md:col-gap-4 mb-5 grid md:grid-cols-2">
+                  {/* <label>Name</label> */}
                   <input
                     className="col-span-1 w-full border-b py-3 text-sm outline-none focus:border-b-2 focus:border-green-700"
                     type="text"
                     placeholder="Name"
-                    name="name"
+                    name="user_name"
                   />
+                  {/* <label>Email</label> */}
                   <input
                     className="col-span-1 w-full border-b py-3 text-sm outline-none focus:border-b-2  focus:border-green-700"
                     type="email"
                     placeholder="Email"
-                    name="email"
+                    name="user_email"
                   />
                 </div>
                 <textarea
-                  className="mb-10 w-full resize-y whitespace-pre-wrap border-b py-3 text-sm outline-none focus:border-b-2 focus:border-black"
+                  className="mb-10 w-full resize-y whitespace-pre-wrap border-b py-3 text-sm outline-none focus:border-b-2 focus:border-green-700"
+                  name="message"
                   id=""
                   rows="6"
                   placeholder="Question"
                 ></textarea>
-
+                {/* <input type="submit" value="Send" /> */}
                 <button
                   type="submit"
                   class="group flex cursor-pointer items-center  bg-green-950 bg-none px-8 py-4 text-center leading-tight text-white  hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-green-300"
                 >
-                  Send
+                  <input type="submit" value="Send" />
                   <svg
                     className="group-hover:ml-8 ml-4 transition-all"
                     xmlns="http://www.w3.org/2000/svg"
