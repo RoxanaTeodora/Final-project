@@ -1,4 +1,5 @@
 ## React + Vite
+npm run dev
 
 ### The site uses local storage for the Cart and Admin functionalities. For every modification in the Admin page is mandatory to Delete browsing history and cookies.
 The website was created using tailwindcss components. 
