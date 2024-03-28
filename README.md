@@ -19,11 +19,11 @@ Every product has a card component with an "Add to cart" button and a link for m
 In the cart, the user can see the name and the image of the product they chose
 It has an icon for deleting, increasing, and decreasing the quantity of the chosen objects
 
--Contact
+- Contact
 It has a form component with other links for social contact
 It is a functional component using Email.js 
 
--Admin
+- Admin
 It has a section for adding, editing, and deleting the products using mock API
 MockAPI is a simple tool that generates custom data and performs operations using RESTful interface.
 https://github.com/RoxanaTeodora/Sustainable_furniture_market/assets/142969879/4baf8d6e-5a06-46eb-8a57-32c117a9db50
