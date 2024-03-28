@@ -1,9 +1,9 @@
 ## React + Vite
 
-The site uses local storage for the Cart and Admin functionalities. For every modification in the Admin page is mandatory to Delete browsing history and cookies.
+### The site uses local storage for the Cart and Admin functionalities. For every modification in the Admin page is mandatory to Delete browsing history and cookies.
 The website was created using tailwindcss components. 
 
-### The site has five main pages: About, Products, Cart, Contact and Admin. It is created using Vite.js based on the prototype in Figma:
+##### The site has five main pages: About, Products, Cart, Contact and Admin. It is created using Vite.js based on the prototype in Figma:
 https://www.figma.com/proto/bRZp7SBGgxhdOpEnAUABPD/Lec%C8%9Bie-practic%C4%83-(Copy)?type=design&node-id=8249-213&t=sYnTgIYP9pFp0F55-0&scaling=min-zoom&page-id=0%3A1
 
 - About
