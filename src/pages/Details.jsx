@@ -1,52 +1,44 @@
-// import React from "react";
-
-// const Details = () => {
-//   return <div>Details</div>;
-// };
-
-// export default Details;
-
-// ProductDetail.js
+//Detail.js
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Details = () => {
-  const [products, setProducts] = useState(null);
+  const [product, setProduct] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const fetchProduct = async () => {
       const response = await fetch(
-        "https://652bdb8ed0d1df5273eecf98.mockapi.io/3dproducts"
+        `https://652bdb8ed0d1df5273eecf98.mockapi.io/3dproducts/${id}`
       );
-      const products = await response.json();
-      // console.log(products);
-      setProducts(products);
+      const product = await response.json();
+      //console.log(product);
+      setProduct(product);
     };
 
-    fetchProducts();
-  }, []);
+    fetchProduct();
+  }, [id]);
 
-  return products ? (
+  return product ? (
     <div>
-      {products.map((product) => (
-        <div key={product.id} className="flex justify-center">
-          {/* Partea stângă pentru imagine și nume */}
-          <div className="w-auto">
-            <div className="flex justify-evenly pt-12 pl-20">
-              <img src={product.imageURL} width={300} alt="" />
-            </div>
-            <div>
-              <div className="font-bold justify-evenly pl-20 flex ">
-                {product.name}
-              </div>
-            </div>
+      <div key={product.id} className="flex justify-center">
+        {/* Partea stângă pentru imagine și nume */}
+        <div className="w-auto">
+          <div className="flex justify-evenly pt-12 pl-20">
+            <img src={product.imageURL} width={300} alt="" />
           </div>
-
-          {/* Partea dreaptă pentru descriere */}
-          <div className="w-1/2 flex flex-col justify-evenly mt-40 ">
-            <div className="justify-center">{product.description}</div>
+          <div>
+            <div className="font-bold justify-evenly pl-20 flex ">
+              {product.name}
+            </div>
           </div>
         </div>
-      ))}
+
+        {/* Partea dreaptă pentru descriere */}
+        <div className="w-1/2 flex flex-col justify-evenly mt-40 ">
+          <div className="justify-center">{product.description}</div>
+        </div>
+      </div>
     </div>
   ) : (
     <div>Loading...</div>

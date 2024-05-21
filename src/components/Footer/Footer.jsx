@@ -6,7 +6,7 @@ const Footer = (props) => {
   return (
     <div>
       <footer className="relative mt-20 bg-[#213425] px-4 pt-20">
-        <div className="absolute -top-10 left-1/2 h-20 w-20 -translate-x-1/2 rounded-lg border-4 border-[#213425] bg-white ">
+        <div className="absolute -top-10 left-1/2 h-16 w-16 -translate-x-1/2 rounded-lg border-4 border-[#213425] bg-white ">
           <img
             height={8000}
             width={8000}
