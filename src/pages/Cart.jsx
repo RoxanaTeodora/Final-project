@@ -10,12 +10,13 @@ const Cart = () => {
   const [productsInCart, setProductsInCart] = useState(
     JSON.parse(window.localStorage.getItem("cart"))
   );
+  const [totalPrice, setTotalPrice] = useState(0);
 
   //se face un request api in ambele pg home and cart
   useEffect(() => {
     const fetchProducts = async () => {
       const response = await fetch(
-        "https://652bdb8ed0d1df5273eecf98.mockapi.io/3dproducts"
+        `https://652bdb8ed0d1df5273eecf98.mockapi.io/3dproducts`
       );
       const products = await response.json();
       setProducts(products);
@@ -23,6 +24,19 @@ const Cart = () => {
 
     fetchProducts();
   }, []);
+
+  useEffect(() => {
+    if (products && productsInCart) {
+      let total = 0;
+      productsInCart.forEach((item) => {
+        const product = products.find((p) => p.id === item.id);
+        if (product) {
+          total += product.price * item.qt;
+        }
+      });
+      setTotalPrice(total);
+    }
+  }, [products, productsInCart]);
   // lista de dependențe, iar dacă aceasta este goală, efectul se va rula doar o singură dată return
   //useEffect se ruleaza doar la incarcare in pg sau cand se schimba mai multe state-uri, ex. seara se schimba preturile cu alt api
 
@@ -138,6 +152,9 @@ const Cart = () => {
           </div>
         );
       })}
+      <div className="flex justify-center items-center">
+        <p className="mr-10">Total: {totalPrice} RON</p>
+      </div>
     </div>
   ) : (
     <div className="pt-20">
@@ -147,7 +164,6 @@ const Cart = () => {
       </Link>
     </div>
   );
-  <div></div>;
 };
 
 export default Cart;
