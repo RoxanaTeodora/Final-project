@@ -124,7 +124,7 @@ const Contact = () => {
                 {/* <input type="submit" value="Send" /> */}
                 <button
                   type="submit"
-                  class="group flex cursor-pointer items-center  bg-green-950 bg-none px-8 py-4 text-center leading-tight text-white  hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-green-300"
+                  class="group flex cursor-pointer items-center  bg-green-950 bg-none px-8 py-4 text-center leading-tight text-white  hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-green-300 sm: ml-20"
                 >
                   <input type="submit" value="Send" />
                   <svg
