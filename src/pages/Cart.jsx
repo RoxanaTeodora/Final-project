@@ -100,64 +100,59 @@ const Cart = () => {
 
   //daca exista produce in card
   return products && productsInCart ? (
-    <div className="p-10 gap-10 flex flex-col ">
+    <div className="p-10 gap-10 flex flex-col items-center">
       {productsInCart.map((productInCart) => {
         const product = getProductById(productInCart.id);
 
         return (
           <div
-            className="flex gap-10 justify-between items-center"
+            className="flex flex-col gap-2 md:flex-row items-center"
             key={productInCart.id}
           >
-            <table className="w-full">
-              <tr className="flex justify-center items-center">
-                <td className="p-10 w-[250px]">
-                  <p>{product.name}</p>
-                </td>
-                <td className="p-2 justify-center align-middle flex">
-                  <img width={150} src={product.imageURL} alt={product.name} />
-                </td>
-                <td className="p-10 ">
-                  <p>{product.price}</p>
-                </td>
-                <td className="p-2 flex gap-5 items-center">
-                  <img
-                    src={minus}
-                    alt="minus"
-                    className="w-[20px] hover:cursor-pointer"
-                    id={productInCart.id}
-                    onClick={decreaseQuantity}
-                  />
-
-                  <p>{productInCart.qt}</p>
-
-                  <img
-                    src={add}
-                    alt="add"
-                    className="w-[20px] hover:cursor-pointer"
-                    id={productInCart.id}
-                    onClick={increaseQuantity}
-                  />
-
-                  <img
-                    src={bin}
-                    alt="bin"
-                    className="w-[20px] hover:cursor-pointer"
-                    onClick={deleteProductFromCart}
-                    id={productInCart.id}
-                  />
-                </td>
-              </tr>
-            </table>
+            <div className="flex flex-col lg:flex-row items-center justify-between w-full">
+              <p className="px-2 w-full ">{product?.name}</p>
+              <div className="px-2 flex justify-center items-center lg:w-[500px]">
+                <img width={150} src={product?.imageURL} alt={product?.name} />
+              </div>
+              <p className="px-2 justify-center items-center md:w-full">
+                {product?.price} RON
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-between w-full md:gap-5">
+              <div className="flex items-center justify-center gap-5 w-full md:w-auto">
+                <img
+                  src={minus}
+                  alt="minus"
+                  className="w-[20px] hover:cursor-pointer"
+                  id={productInCart.id}
+                  onClick={decreaseQuantity}
+                />
+                <p>{productInCart.qt}</p>
+                <img
+                  src={add}
+                  alt="add"
+                  className="w-[20px] hover:cursor-pointer"
+                  id={productInCart.id}
+                  onClick={increaseQuantity}
+                />
+                <img
+                  src={bin}
+                  alt="bin"
+                  className="w-[20px] hover:cursor-pointer"
+                  onClick={deleteProductFromCart}
+                  id={productInCart.id}
+                />
+              </div>
+            </div>
           </div>
         );
       })}
-      <div className="flex justify-center items-center">
-        <p className="mr-10">Total: {totalPrice} RON</p>
+      <div className="flex justify-center items-center mt-4">
+        <p className="text-lg font-bold">Total: {totalPrice} RON</p>
       </div>
     </div>
   ) : (
-    <div className="pt-20">
+    <div className="pt-20 text-center">
       Cosul este momentan gol, va rugam sa adaugati produse din{" "}
       <Link className="underline text-blue-500" to="/">
         pagina de produse
