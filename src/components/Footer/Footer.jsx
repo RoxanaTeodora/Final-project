@@ -10,7 +10,7 @@ const Footer = (props) => {
           <img
             height={8000}
             width={8000}
-            class="h-full w-full object-contain"
+            className="h-full w-full object-contain"
             src="./logo4.png"
             alt="logo"
           />
@@ -37,7 +37,7 @@ const Footer = (props) => {
             Admin
           </Link>
         </nav>
-        <p class="py-8 text-center text-gray-300">
+        <p className="py-8 text-center text-gray-300">
           © 2023 | 3D Green Concept | All Rights Reserved
         </p>
       </footer>

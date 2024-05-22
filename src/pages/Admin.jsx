@@ -196,7 +196,7 @@ const Admin = () => {
                         <button
                           id={product.id}
                           onClick={(e) => deleteProduct(e.target.id)}
-                          className="pb-30 bg-orange-700 hover:bg-[gray] text-gray-800 font-semibold py-2 px-4 border border-gray-400 shadow"
+                          className="mb-8 bg-orange-700 hover:bg-[gray] text-gray-800 font-semibold py-2 px-4 border border-gray-400 shadow"
                         >
                           Delete
                         </button>
