@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <div>
-      <footer className="relative mt-20 bg-[#213425] px-4 pt-20">
+    <>
+      <footer className="relative mt-14 bg-[#213425] px-4 pt-20">
         <div className="absolute -top-10 left-1/2 h-16 w-16 -translate-x-1/2 rounded-lg border-4 border-[#213425] bg-white ">
           <img
             height={8000}
@@ -17,7 +16,7 @@ const Footer = (props) => {
         </div>
         <nav
           aria-label="Footer Navigation"
-          className="mx-auto mb-6 flex max-w-lg flex-col gap-8 text-center sm:flex-row sm:text-left align-center justify-center"
+          className="mx-auto  flex max-w-lg flex-col gap-8 text-center sm:flex-row sm:text-left align-center justify-center"
         >
           <Link className="font-medium text-white" to="/about">
             About
@@ -41,7 +40,7 @@ const Footer = (props) => {
           © 2023 | 3D Green Concept | All Rights Reserved
         </p>
       </footer>
-    </div>
+    </>
   );
 };
 
