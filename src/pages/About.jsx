@@ -14,8 +14,8 @@ function About() {
   ];
 
   return (
-    <div>
-      <div className=" mx-auto max-w-screen-xxl overflow-hidden shadow-lg ">
+    <>
+      <div className="  overflow-hidden shadow-lg m-10">
         <div className=" w-full flex flex-col overflow-hidden  sm:flex-row md:h-200">
           <div className="order-first ml-auto h-48 w-full sm:order-none sm:h-auto sm:w-1/2 lg:w-2/5">
             <img
@@ -25,10 +25,10 @@ function About() {
             />
           </div>
           <div className="flex w-full flex-col sm:w-1/2 sm:p-8 lg:w-3/5">
-            <h2 className="text-xl font-bold  md:text-2xl lg:text-4xl mt-4 ">
+            <h2 className="text-xl font-bold  md:text-2xl lg:text-4xl mt-4 ml-4">
               3D Concept Models for sustainable furniture
             </h2>
-            <p className="mt-12 text-lg ml-4 p-30 text-justify mr-10 w-ful">
+            <p className="mt-12 text-lg  p-30 text-justify mr-10 w-ful">
               The environmental study on 3D models of furniture using
               sustainable solutions for manufacturing.The purpose of the
               eco-design is to reduce the negative impact on the environment by
@@ -46,7 +46,7 @@ function About() {
       </div>
 
       <div>
-        <div className="flex flex-col md:flex-row items-center p-10">
+        <div className="flex flex-col md:flex-row items-center p-10 ">
           <div className="flex flex-col items-center md:w-1/2 p-10">
             <p className="sm:text-3xl md:text-4xl font-bold  md:text-justify p-30 lg:mr-20 flex items-center justify-center">
               Various models of chairs, tables and lights
@@ -64,12 +64,12 @@ function About() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center h-auto md:h-[300px] bg-[#D6E0C6] mb-10 p-4 md:p-0">
+        <div className="m-10 flex flex-col md:flex-row items-center justify-center h-auto md:h-[300px] bg-[#D6E0C6] mb-10 p-4 md:p-0">
           <div className="flex flex-col md:flex-row md:divide-x md:divide-gray-200 md:space-x-4">
             <div className="flex flex-col items-center max-w-xs p-4 text-green-950">
               <p className="text-gray-600 font-bold">
                 Sustainability
-                <span className="block mt-2 font-normal">
+                <span className="block mt-2 font-normal items-center">
                   Choosing sustainable contributes to a greener and more
                   eco-friendly lifestyle
                 </span>
@@ -97,7 +97,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-screen-xxl overflow-hidden shadow-lg mt-4">
+      <div className="max-w-screen-xxl overflow-hidden shadow-lg m-10">
         <div className="flex flex-col md:flex-row w-full bg-white">
           <div className="flex w-full flex-col p-8 sm:w-1/2 lg:w-3/5 order-last md:order-first">
             <h2 className="text-xl md:text-2xl lg:text-4xl font-bold ">
@@ -126,7 +126,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

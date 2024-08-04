@@ -20,9 +20,9 @@ const Details = () => {
   }, [id]);
 
   return product ? (
-    <div>
+    <>
       <div key={product.id} className="flex justify-center">
-        {/* Partea stângă pentru imagine și nume */}
+        {/*left side name and img */}
         <div className="w-auto">
           <div className="flex justify-evenly pt-12 pl-20">
             <img src={product.imageURL} width={300} alt="" />
@@ -34,12 +34,12 @@ const Details = () => {
           </div>
         </div>
 
-        {/* Partea dreaptă pentru descriere */}
+        {/* right side description */}
         <div className="w-1/2 flex flex-col justify-evenly mt-40 ">
           <div className="justify-center">{product.description}</div>
         </div>
       </div>
-    </div>
+    </>
   ) : (
     <div>Loading...</div>
   );

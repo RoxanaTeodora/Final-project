@@ -9,7 +9,7 @@ const ProductCard = ({ product, onInfoClick }) => {
       productsInCart = JSON.parse(window.localStorage.getItem("cart"));
     }
     const productAlreadyAdded = productsInCart.find(
-      (p) => p.id === e.target.id
+      (product) => product.id === e.target.id
     );
     if (productAlreadyAdded) {
       productAlreadyAdded.qt += 1;

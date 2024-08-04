@@ -26,9 +26,9 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <div className="sm:p-10 my-auto">
-        <section className="mx-auto max-w-screen-xl  md:border md:shadow-lg">
+    <>
+      <div className="sm:p-10 m-auto">
+        <section className="mx-auto max-w-screen-xxl  md:border md:shadow-lg">
           <div className="grid grid-cols-4 text-gray-800 lg:grid-cols-3">
             <div className="col-span-4 bg-gray-50 px-8 py-10 text-gray-800 md:col-span-2 md:border-r md:px-10 md:py-12 lg:col-span-1">
               <h2 className="mb-8 text-2xl font-bold ">Contact me</h2>
@@ -98,7 +98,7 @@ const Contact = () => {
               <h2 className="mb-8 text-2xl font-bold">Get in touch</h2>
 
               <form ref={form} onSubmit={sendEmail}>
-                <div className="md:col-gap-4 mb-5 grid md:grid-cols-2">
+                <div className="md:col-gap-4 mb-5 grid md:grid-cols-2 ">
                   {/* <label>Name</label> */}
                   <input
                     className="col-span-1 w-full border-b py-3 text-sm outline-none focus:border-b-2 focus:border-green-700 user_name"
@@ -149,7 +149,7 @@ const Contact = () => {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 
