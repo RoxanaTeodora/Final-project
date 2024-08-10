@@ -19,6 +19,9 @@ https://www.figma.com/proto/bRZp7SBGgxhdOpEnAUABPD/Lec%C8%9Bie-practic%C4%83-(Co
 - Products
   Every product has a card component with an "Add to cart" button and a link for more details
 
+- Details
+  Every product has a pop-up detailed page implemented using useParams
+
 - Cart
   In the cart, the user can see the name and the image of the product they chose
   It has an icon for deleting, increasing, and decreasing the quantity of the chosen objects
