@@ -8,7 +8,7 @@ The website was created using tailwindcss components.
 
 ##### The site has five main pages: About, Products, Cart, Contact and Admin. It is created using Vite.js based on the prototype in Figma:
 
-https://www.figma.com/proto/bRZp7SBGgxhdOpEnAUABPD/Lec%C8%9Bie-practic%C4%83-(Copy)?type=design&node-id=8249-213&t=sYnTgIYP9pFp0F55-0&scaling=min-zoom&page-id=0%3A1
+![Group 9 (1)](https://github.com/user-attachments/assets/3b0001ba-f7ba-4ded-9c75-22b39b3ac353)
 
 - About
   Presents the description of the website
